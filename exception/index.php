@@ -10,8 +10,8 @@ try{
   print $sum->doSum(10, 20);
 
 }catch(\Error $e){
-  print $e->getMessage();
-}catch(\Exception $e){
+  print_r($e->getTrace());
+}catch(\Code\Exceptions\MyCustomException $e){
   print $e->getMessage();
 }
 
